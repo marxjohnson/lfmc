@@ -7,7 +7,7 @@
 // @match     http://www.lovefilm.com/*
 // @match     https://www.lovefilm.com/*
 // @match	https://www.amazon.co.uk/ap/signin?openid.assoc_handle=lovefilm*
-// @version     1
+// @version     1.1
 // @grant       GM_addStyle
 // @grant    GM_getResourceText
 // @require http://yui.yahooapis.com/combo?3.14.1/yui-base/yui-base-min.js&3.14.1/oop/oop-min.js&3.14.1/event-custom-base/event-custom-base-min.js&3.14.1/features/features-min.js&3.14.1/dom-core/dom-core-min.js&3.14.1/dom-base/dom-base-min.js&3.14.1/selector-native/selector-native-min.js&3.14.1/selector/selector-min.js&3.14.1/node-core/node-core-min.js&3.14.1/color-base/color-base-min.js&3.14.1/dom-style/dom-style-min.js&3.14.1/node-base/node-base-min.js&3.14.1/event-base/event-base-min.js&3.14.1/event-delegate/event-delegate-min.js&3.14.1/node-event-delegate/node-event-delegate-min.js&3.14.1/pluginhost-base/pluginhost-base-min.js&3.14.1/pluginhost-config/pluginhost-config-min.js&3.14.1/node-pluginhost/node-pluginhost-min.js&3.14.1/dom-screen/dom-screen-min.js&3.14.1/node-screen/node-screen-min.js&3.14.1/node-style/node-style-min.js&3.14.1/attribute-core/attribute-core-min.js&3.14.1/event-custom-complex/event-custom-complex-min.js&3.14.1/attribute-observable/attribute-observable-min.js
