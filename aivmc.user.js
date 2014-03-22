@@ -12,6 +12,7 @@
 // @require http://yui.yahooapis.com/combo?3.14.1/attribute-extras/attribute-extras-min.js&3.14.1/attribute-base/attribute-base-min.js&3.14.1/attribute-complex/attribute-complex-min.js&3.14.1/base-core/base-core-min.js&3.14.1/base-observable/base-observable-min.js&3.14.1/base-base/base-base-min.js&3.14.1/base-pluginhost/base-pluginhost-min.js&3.14.1/classnamemanager/classnamemanager-min.js&3.14.1/event-synthetic/event-synthetic-min.js&3.14.1/event-focus/event-focus-min.js&3.14.1/widget-base/widget-base-min.js&3.14.1/widget-htmlparser/widget-htmlparser-min.js&3.14.1/widget-skin/widget-skin-min.js&3.14.1/widget-uievents/widget-uievents-min.js&3.14.1/arraylist/arraylist-min.js&3.14.1/base-build/base-build-min.js&3.14.1/widget-parent/widget-parent-min.js&3.14.1/widget-child/widget-child-min.js&3.14.1/tabview-base/tabview-base-min.js&3.14.1/plugin/plugin-min.js&3.14.1/event-simulate/event-simulate-min.js&3.14.1/async-queue/async-queue-min.js&3.14.1/gesture-simulate/gesture-simulate-min.js
 // @require http://yui.yahooapis.com/combo?3.14.1/node-event-simulate/node-event-simulate-min.js&3.14.1/event-key/event-key-min.js&3.14.1/node-focusmanager/node-focusmanager-min.js&3.14.1/tabview/tabview-min.js&3.14.1/array-extras/array-extras-min.js&3.14.1/history-base/history-base-min.js&3.14.1/yui-later/yui-later-min.js&3.14.1/history-html5/history-html5-min.js&3.14.1/history-hash/history-hash-min.js&3.14.1/history-hash-ie/history-hash-ie-min.js&3.14.1/router/router-min.js&3.14.1/pjax-base/pjax-base-min.js&3.14.1/querystring-stringify-simple/querystring-stringify-simple-min.js&3.14.1/io-base/io-base-min.js&3.14.1/pjax-content/pjax-content-min.js&3.14.1/pjax/pjax-min.js&3.14.1/querystring-parse/querystring-parse-min.js&3.14.1/querystring-stringify/querystring-stringify-min.js
 // @resource yuiskin http://yui.yahooapis.com/combo?3.14.1/widget-base/assets/skins/sam/widget-base.css&3.14.1/tabview/assets/skins/sam/tabview.css&3.14.1/cssbutton/cssbutton-min.css
+// @resource css https://raw.githubusercontent.com/marxjohnson/lfmc/master/styles.css
 // ==/UserScript==
 
 
@@ -82,17 +83,7 @@ YUI().use('node', 'tabview', 'querystring', 'pjax', function(Y) {
          */
         addStyles: function() {
             GM_addStyle(GM_getResourceText('yuiskin'));
-            var style = '';
-	    style += 'body {font-size: 1.1em;}';
-	    style += '#nav-search-in #nav-search-in-content {display:none;}';
-	    style += '.nav-aui, .nav-aui .nav-submit-button .nav-submit-input, .nav-aui #nav-subnav-container #nav-subnav .nav-subnav-item, .nav-aui #nav-subnav .nav-category-button, .nav-aui #nav-subnav-container #nav-subnav {font-size: inherit !important;}';
-	    style += '.nav-aui #nav-search-label {left:170px;}';
-	    style += '.carousel-control, .carousel-progress-bar-container {display: none;}';
-	    style += '.scrollover.carousel-control {display: block;position: absolute; top: 120px;font-size:1.3em;cursor:pointer;}';
-	    style += '.scrollover.carousel-control:hover {text-decoration:none;}';
-	    style += '.scrollover.carousel-control div {padding-top: .3em;padding-left:.3em;}';
-	    style += '#nav-cross-shop div:first-child {display:none;}';
-            GM_addStyle(style);
+            GM_addStyle(GM_getResourceText('css'));
             Y.one('body').addClass('yui3-skin-sam');
         },
 
