@@ -72,7 +72,8 @@ YUI().use('node', 'tabview', 'querystring', 'pjax', function(Y) {
          */
         forceRedirect: function() {
 	    var navbar = Y.one("ul[data-category='instant-video']");
-	    if (!navbar) {
+	    var lfnavbar = Y.one("ul[data-category='video-rental']");
+	    if (!navbar && !lfnavbar) {
 		var primelink = Y.one(document.evaluate('//a[text()="Prime Instant Video"]', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0));
 		window.location.href = primelink.getAttribute('href');
 	    }
