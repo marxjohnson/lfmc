@@ -104,6 +104,7 @@ YUI().use('node', 'tabview', 'querystring', 'pjax', function(Y) {
          * Global changes to the layout
          */
         fixLayout: function() {
+	    this.removeElement('#nav-cross-shop');
 	    this.removeElement('#nav-cross-shop-links');
 	    this.removeElement('#nav-logo');
 	    this.removeElement('#nav-shop-all-button');
@@ -112,6 +113,8 @@ YUI().use('node', 'tabview', 'querystring', 'pjax', function(Y) {
 	    this.removeElement('#nav-cart');
 	    this.removeElement('#nav-wishlist');
 	    this.removeElement('#page-footer');
+	    this.removeElement('.smart-promo-dark-piv');
+	    this.removeElement('#welcomeRowTable');
         },
 
 	initOverview: function() {
