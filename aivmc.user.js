@@ -112,18 +112,18 @@ YUI().use('node', 'tabview', 'querystring', 'pjax', function(Y) {
          * Global changes to the layout
          */
         fixLayout: function() {
-	    Y.one('#nav-cross-shop-links').remove();
-	    Y.one('#nav-logo').remove();
-	    Y.one('#nav-shop-all-button').remove();
-	    Y.one('#nav-your-account').remove();
-	    Y.one('#nav-your-prime').remove();
-	    Y.one('#nav-cart').remove();
-	    Y.one('#nav-wishlist').remove();
-	    Y.one('#page-footer').remove();
+	    this.removeElement('#nav-cross-shop-links');
+	    this.removeElement('#nav-logo');
+	    this.removeElement('#nav-shop-all-button');
+	    this.removeElement('#nav-your-account');
+	    this.removeElement('#nav-your-prime');
+	    this.removeElement('#nav-cart');
+	    this.removeElement('#nav-wishlist');
+	    this.removeElement('#page-footer');
         },
 
 	initOverview: function() {
-	    Y.one('.smart-promo').remove();
+	    this.removeElement('.smart-promo');
 	    tabhtml = '<div id="yui-tabcontainer" class="span-8"><ul id="yui-tabs">';
 	    tabhtml += '</ul><div id="yui-tabcontents">';
 	    tabhtml += '</div></div>';
@@ -341,6 +341,12 @@ YUI().use('node', 'tabview', 'querystring', 'pjax', function(Y) {
 	stopScroll: function() {
 	    clearInterval(this.scrolling);
 	    this.scrollDiv = null;
+	},
+
+	removeElement: function(selector) {
+	    if (el = Y.one(selector)) {
+		el.remove();
+	    }
 	}
 
     }
